@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
             val clickableViews: List<View> =
                 listOf(textView, textView2, textView3,
-                    textView4, textView5)
+                    textView4, textView5,red_button, green_button, yellow_button)
 
             for (item in clickableViews) {
                 item.setOnClickListener { makeColored(it) }
@@ -37,7 +37,14 @@ class MainActivity : AppCompatActivity() {
             R.id.textView4 -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.textView5 -> view.setBackgroundResource(android.R.color.holo_green_light)
 
+            //Buttons
+            R.id.red_button -> textView3.setBackgroundResource(R.color.my_red)
+            R.id.yellow_button -> textView4.setBackgroundResource(R.color.my_yellow)
+            R.id.green_button -> textView5.setBackgroundResource(R.color.my_green)
+
             else -> view.setBackgroundColor(Color.LTGRAY)
+
+
         }
     }
 }
